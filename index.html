@@ -151,11 +151,16 @@ window.onload = function () {
             "en": "This document cannot be viewed on mobile. Please open it on a computer."
         };
 
-        document.getElementById("title").innerText =
-            mobileTitle[lang] || mobileTitle["en"];
+document.getElementById("title").innerText =
+    mobileTitle[lang] ||
+    mobileTitle[langBase] ||
+    mobileTitle["en"];
 
-        document.getElementById("paragraph").innerText =
-            mobileMsg[lang] || mobileMsg["en"];
+document.getElementById("paragraph").innerText =
+    mobileMsg[lang] ||
+    mobileMsg[langBase] ||
+    mobileMsg["en"];
+        
 
         return;
     }
