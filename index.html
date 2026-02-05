@@ -165,9 +165,15 @@ document.getElementById("paragraph").innerText =
         return;
     }
 
+document.getElementById("title").innerText =
+    mobileTitle[lang] ||
+    mobileTitle[langBase] ||
+    mobileTitle["en"];
 
-    document.getElementById("title").innerText = title[lang] || title["en"];
-    document.getElementById("paragraph").innerHTML = text[lang] || text["en"];
+document.getElementById("paragraph").innerText =
+    mobileMsg[lang] ||
+    mobileMsg[langBase] ||
+    mobileMsg["en"];
 };
 </script>
 </body>
